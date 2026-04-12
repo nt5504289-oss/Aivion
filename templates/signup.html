@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/signup.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav">
+
+            <a href="index.html" class="navbar__logo">
+                🎓 Aivion
+            </a>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+            <ul class="navbar_menu" id="navMenu">
+                <li><a href="mindmap.html">Mind Map</a></li>
+                <li><a href="summarize.html">Summarize</a></li>
+                <li><a href="chat_bot.html">Chat bot</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container active" id="container">
+                <div class="form-container sign-up">
+                    <form>
+                        <h1>Create Account</h1>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.google.com/" class="icon" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="https://github.com/" class="icon" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email for registeration</span>
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in">
+                    <form>
+                        <h1>Sign In</h1>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.google.com/" class="icon" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="https://github.com/" class="icon" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email password</span>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <a href="#">Forget Your Password?</a>
+                        <button>Sign In</button>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="login">Sign In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Register with your personal details to use all of site features</p>
+                            <button class="hidden" id="register">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+
+        <div class="footer_content">
+            <p>© 2026 Student AI Assistant</p>
+            <p>Built for students, powered by AI</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='signup.js') }}"></script>
+
+</body>
+
+</html>

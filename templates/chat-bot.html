@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/chatbot2.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="/static/logo.jpg" alt="logo">
+            </div>
+            <div class="nav">
+                <li><a href="#new-chat">New Chat</a></li>
+                <li><a href="SUMMARY\summarize.html">Summarizer</a></li>
+                <li><a href=>Research</a></li>
+                <li><button class="his-btn"><span>History</button></li>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p class="left-p">To access your previous chats, and get results tailored to your needs</p>
+            <a href="signin"><button>Sign In!</button></a>
+        </div>
+    </div>
+
+    <center>
+        <div class="main">
+            <div class="content">
+                <div class="output-area">
+                    <textarea name="output" id="o-area" placeholder="Output will be shown here"></textarea>
+                    </p>
+                </div>
+                <div class="in">
+                    <div class="input-area">
+                        <div class="plus">
+                            <label for="fileInput">+</label>
+                            <input type="file" id="fileInput" accept=".txt,.pdf,.docx" multiple>
+                        </div>
+
+                        <input type="text" id="userInput" placeholder="What's on your mind?">
+
+                        <button id="sendButton">↑</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </center>
+
+    <script src="{{ url_for('static', filename='chatbot2.js') }}"></script>
+
+</body>
+
+</html>

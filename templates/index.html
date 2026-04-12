@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aivion</title>
+    <link rel="icon" href="/static/logo.jpg" class="logo">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav">
+
+            <a href="index.html" class="navbar__logo">
+                🎓 Aivion
+            </a>
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+            <ul class="navbar_menu" id="navMenu">
+                <li><a href="mindmap.html">Mind Map</a></li>
+                <li><a href="summarize">Summarize</a></li>
+                <li><a href="chat-bot">Chat bot</a></li>
+                <li><a href="contact-us">Contact Us</a></li>
+                <li><a href="about-us">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero_container">
+
+            <div class="hero_content">
+
+                <h1 class="hero_title">
+                    Your Study Partner
+                </h1>
+
+                <p class="hero_subtitle">
+                    Ask questions, generate mind maps, summarize notes all powered by AI to boost your learning
+                </p>
+
+                <div class="hero_actions">
+                    <a href="internal-chat.html" class="btn_primary" aria-label="Start chat with Ai">Start chat </a>
+                    <a href="summarize.html" class="btn_secondary" aria-label="Summarize notes">Summarize Notes</a>
+                </div>
+
+
+            </div>
+
+            <div class="login_box">
+                <div class="login_input">
+                    <h3 class="login_space"> Sign In</h3>
+                    <p class="email_space">Email</p>
+                    <input type="email" placeholder="Enter your email" aria-label="Email input for updates" class="email">
+                    <p class="password_space">Password</p>
+                    <input type="password" placeholder="Enter your password" aria-label="Password input for updates" class="password">
+                    <button class="login_button" aria-label="Login to your account">Login</button>
+                    <a href="signup" class="signup_link" aria-label="Sign up link">Don't have an account? Sign up</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="features_container">
+            <h2 class="section_title"> Powerfull Features For Students
+            </h2>
+
+            <div class="features_grid">
+
+                <div class="feature-card">
+                    <h3>💬 AI Chat Assistant</h3>
+                    <!-- Added emoji for  attractive look -->
+                    <p>Get instant answers to your academic questions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🧠 Mind Map Generator</h3>
+                    <!-- Added emoji for  attractive look -->
+                    <p>Visualize complex topics into structured diagrams.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📝 Notes Summarizer</h3>
+                    <!-- Added emoji for  attractive look -->
+                    <p>Convert long notes into short and clear key points.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer_content">
+            <p>© 2026 Student AI Assistant</p>
+            <p>Built for students, by Fs0ceity</p>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>

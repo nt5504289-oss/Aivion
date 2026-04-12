@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer</title>
+    <link rel="stylesheet" href="/static/timer.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="logo">🎓 Aivion</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/summarize">Summarize</a>
+            <a href="/chat">Chatbot</a>
+            <a href="/timer">Timer</a>
+            <a href="/contact-us">Contact</a>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h1 class="title">⏳ Study Timer</h1>
+        <p class="subtitle">
+            Stay focused with Pomodoro technique. Use lofi music to boost productivity.
+        </p>
+
+        <div class="timer-box">
+
+            <div class="circle">
+                <svg width="200" height="200">
+        <circle cx="100" cy="100" r="90" class="bg"></circle>
+        <circle cx="100" cy="100" r="90" class="progress" id="progress"></circle>
+      </svg>
+                <div class="time" id="time">25:00</div>
+            </div>
+
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+            </div>
+
+            <div class="lofi">
+                <button id="lofiBtn">🎧 Lofi Mode</button>
+                <audio id="audio" loop>
+        <source src="/static/lofi.mp3" type="audio/mpeg">
+      </audio>
+            </div>
+
+            <div class="volume">
+                🔊 Volume
+                <input type="range" id="volume" min="0" max="1" step="0.01">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Aivion Study Assistant</p>
+        <p>Stay focused. Learn smarter. 🚀</p>
+    </footer>
+
+    <script src="/static/timer.js"></script>
+</body>
+
+</html>

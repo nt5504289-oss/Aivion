@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar" id="sidebar1">
+        <div class="logo"></div>
+
+        <nav>
+            <ul>
+                <li><a href="chatbot.html">Research</a></li>
+                <li><a href="about.html">History</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1 id="text1">AI Text Summarizer</h1>
+        </div>
+        <div class="io-area">
+            <div class="input-area">
+                <div>
+
+                    <h4 id="text1">Enter your text here...
+                    </h4>
+                </div>
+                <div class="userInput"><textarea name="userInput" id="input1" placeholder="Enter your text in the box below and click 'Summarize' to get a concise summary of your content."></textarea>
+                    <div id="sendButton"><button type="submit">Summarize</button></div>
+                </div>
+
+            </div>
+            <div class="result-arrow">
+                <img src="/static/arrow.png" alt="Result Arrow">
+
+            </div>
+            <div class="output-area">
+                <h3 id="text1">Summary:</h3>
+                <div class="userOutput">
+                    <textarea name="summaryOutput" id="summaryOutput" placeholder="Your summary will appear here. Click on the 'Copy' button to copy the text."></textarea>
+                    <div id="cpybtn">
+                        <button onclick="copyText()">Copy</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <p>© 2026 AI Summarizer | Built with ❤️ by Fs0ciety</p>
+    </footer>
+    <script src="{{ url_for('static', filename='summarize.js') }}"></script>
+
+</body>
+
+</html>

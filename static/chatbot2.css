@@ -1,0 +1,225 @@
+/* ===== Base Layout (GRID) ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    /* sidebar + main */
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+    background-color: #0f0f0f;
+    color: #fff;
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* Navigation */
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    padding: 12px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.nav li:hover {
+    background-color: #2a2a2a;
+}
+
+
+/* Bottom section */
+
+.bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.bottom button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #4f46e5;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.his-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== Main Area ===== */
+
+.main {
+    display: grid;
+    place-items: center;
+    /* center content */
+}
+
+
+/* Replace <center> */
+
+center {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Container */
+
+center>div {
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+
+/* Paragraph text */
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+.left-p {
+    display: flex;
+    /* keep flex here */
+    justify-content: flex-start;
+}
+
+
+/* ===== Input Area ===== */
+
+.input-area {
+    display: flex;
+    /* KEEP FLEX */
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 30px;
+    padding: 15px 20px;
+    gap: 10px;
+    box-shadow: 0 0 0 1px #333;
+    transition: 0.2s ease;
+    width: 650px;
+    height: 4vh;
+}
+
+
+/* Focus effect */
+
+.input-area:focus-within {
+    box-shadow: 0 0 0 2px #4f46e5;
+}
+
+
+/* File upload */
+
+.plus input[type="file"] {
+    color: white;
+    font-size: 12px;
+    width: 1cm;
+    background-image: url("asset\plus.jpg");
+    background-size: cover;
+}
+
+#fileInput {
+    display: none;
+}
+
+label {
+    font-size: 40px;
+}
+
+
+/* Text input */
+
+#userInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+
+/* Placeholder */
+
+#userInput::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Send button */
+
+#sendButton {
+    background-color: rgba(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 7px 16px;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+/* Textarea */
+
+textarea#o-area {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 932px;
+    height: 487px;
+    background: transparent;
+    /* 👈 KEY FIX */
+    color: #ffffff;
+    /* 👈 KEY FIX */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    backdrop-filter: blur(6px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea#o-area::placeholder {
+    color: #94A3B8;
+}
+
+
+/* Input wrapper */
+
+.in {
+    display: flex;
+    /* KEEP FLEX */
+    justify-content: center;
+}

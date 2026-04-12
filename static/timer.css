@@ -1,0 +1,237 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    min-height: 100vh;
+    color: #E0E7FF;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/bg-study.jpg') no-repeat center/cover;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+.nav a {
+    color: #E0E7FF;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #00E5FF;
+    text-shadow: 0 0 8px #00E5FF;
+}
+
+.logo {
+    color: #00E5FF;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 10px #00E5FF;
+}
+
+
+/* ================= MAIN ================= */
+
+.main {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= TITLE ================= */
+
+.title {
+    font-size: 36px;
+    color: #00E5FF;
+    text-shadow: 0 0 20px #00E5FF;
+}
+
+.subtitle {
+    margin: 10px 0 30px;
+    color: #CBD5F5;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* ================= TIMER ================= */
+
+.timer-box {
+    position: relative;
+    text-align: center;
+}
+
+
+/* 🌠 PARTICLE GLOW BEHIND TIMER */
+
+.timer-box::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.15), transparent 70%);
+    filter: blur(40px);
+    z-index: -1;
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+}
+
+
+/* ================= CIRCLE ================= */
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.bg {
+    stroke: rgba(255, 255, 255, 0.15);
+}
+
+.progress {
+    stroke: #00E5FF;
+    stroke-linecap: round;
+    stroke-dasharray: 565;
+    filter: drop-shadow(0 0 10px #00E5FF);
+}
+
+
+/* ================= TIME ================= */
+
+.time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00E5FF, #7C3AED);
+    color: white;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00E5FF;
+}
+
+
+/* ================= LOFI ================= */
+
+.lofi button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* 🎧 LOFI PULSE EFFECT */
+
+.lofi button.active {
+    color: #00E5FF;
+    text-shadow: 0 0 10px #00E5FF;
+    animation: lofiPulse 2s infinite ease-in-out;
+}
+
+@keyframes lofiPulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* ================= VOLUME ================= */
+
+.volume {
+    margin-top: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #00E5FF;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #94A3B8;
+    background: transparent;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 26px;
+    }
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+}
