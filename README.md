@@ -65,7 +65,7 @@ Backend: Render
 AI: Groq API
 
 📁 Project Structure
-
+plaintext
 Aivion/
 │
 ├── static/
