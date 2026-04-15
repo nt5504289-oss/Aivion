@@ -1,49 +1,16 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
 from groq import Groq
+from flask_cors import CORS
+import os
 
-# Configure Groq
-client = Groq(api_key="#")
-
-# Create app
 app = Flask(__name__)
+CORS(app)
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-# ---------------- PAGES (GET) ----------------
-@app.route("/")
-def home():
-    return render_template("index.html")
-
-@app.route("/signup")
-def signup():
-    return render_template("signup.html")
-
-@app.route("/summarize", methods=["GET"])
-def summary_page():
-    return render_template("summarize.html")
-
-@app.route("/about-us")
-def about():
-    return render_template("about-us.html")
-
-@app.route("/contact-us")
-def contact():
-    return render_template("contact-us.html")
-
-@app.route("/summary")
-def summary_2():
-    return render_template("summary.html")
-
-@app.route("/chat-bot")
-def chatbot2():
-    return render_template("chat-bot.html")
-
-@app.route("/study-timer")
-def study_timer():
-    return render_template("study-timer.html")
-
-
-# ----------------  API ----------------
-@app.route("/summarize", methods=["POST"])
+# ---------------- SUMMARY ----------------
+@app.route("/api/summary", methods=["POST"])
 def summarize():
     data = request.get_json()
     text = data.get("text", "")
@@ -54,24 +21,18 @@ def summarize():
     try:
         response = client.chat.completions.create(
             model="openai/gpt-oss-120b",
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Summarize this into a short meaningful summary:\n{text}"
-                }
-            ]
+            messages=[{"role": "user", "content": f"Summarize:\n{text}"}]
         )
 
         result = response.choices[0].message.content
-
         return jsonify({"result": result.strip()})
 
     except Exception as e:
         return jsonify({"error": str(e)})
 
 
-# ----------------  API ----------------
-@app.route("/chat", methods=["POST"])
+# ---------------- CHAT ----------------
+@app.route("/api/chat", methods=["POST"])
 def chat():
     data = request.get_json()
     text = data.get("text", "")
@@ -81,23 +42,88 @@ def chat():
 
     try:
         response = client.chat.completions.create(
-            model= "openai/gpt-oss-120b",
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Reply in 1-2 simple lines:\n{text}"
-                }
-            ]
+            model="openai/gpt-oss-120b",
+            messages=[{"role": "user", "content": f"Reply shortly:\n{text}"}]
         )
 
         result = response.choices[0].message.content
-
         return jsonify({"result": result.strip()})
 
     except Exception as e:
         return jsonify({"error": str(e)})
 
 
-# ---------------- RUN ----------------
+# ---------------- QUIZ ----------------
+@app.route("/api/quiz", methods=["POST"])
+def quiz():
+    data = request.get_json()
+    text = data.get("text", "")
+
+    if not text:
+        return jsonify({"error": "No input provided"})
+
+    try:
+        prompt = f"""Generate 5 MCQs in JSON format.
+
+{{
+  "quiz":[
+    {{"question":"","options":["A","B","C","D"],"answer":""}}
+  ]
+}}
+
+Text:
+{text}
+"""
+
+        response = client.chat.completions.create(
+            model="openai/gpt-oss-120b",
+            messages=[{"role": "user", "content": prompt}]
+        )
+
+        result = response.choices[0].message.content
+        clean = result.replace("```json", "").replace("```", "").strip()
+
+        return jsonify({"result": clean})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+
+# ---------------- FLASHCARDS ----------------
+@app.route("/api/flashcards", methods=["POST"])
+def flashcards():
+    data = request.get_json()
+    text = data.get("text", "")
+
+    if not text:
+        return jsonify({"error": "No input provided"})
+
+    try:
+        prompt = f"""Generate flashcards JSON.
+
+{{
+  "flashcards":[
+    {{"question":"","answer":""}}
+  ]
+}}
+
+Text:
+{text}
+"""
+
+        response = client.chat.completions.create(
+            model="openai/gpt-oss-120b",
+            messages=[{"role": "user", "content": prompt}]
+        )
+
+        result = response.choices[0].message.content
+        clean = result.replace("```json", "").replace("```", "").strip()
+
+        return jsonify({"result": clean})
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+
 if __name__ == "__main__":
     app.run(debug=True)
