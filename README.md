@@ -5,6 +5,11 @@
 
 ---
 
+## 🌟 DEMO 
+<p align="center">
+  <img src="https://i.ibb.co/9k6gN8WH/aivion-demo.gif" alt="Aivion Demo" width="700"/>
+</p>
+
 ## ✨ Features
 
 - 💬 **AI Chatbot** – Ask questions and get instant answers  
