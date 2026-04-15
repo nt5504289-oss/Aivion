@@ -1,7 +1,16 @@
 {
-    "outputDirectory": ".",
+    "cleanUrls": true,
     "routes": [
         { "handle": "filesystem" },
-        { "src": "/(.*)", "dest": "/index.html" }
+
+        { "src": "^/$", "dest": "/index.html" },
+
+        { "src": "^/chatbot$", "dest": "/chatbot.html" },
+        { "src": "^/summarize$", "dest": "/summarize.html" },
+        { "src": "^/flashcards$", "dest": "/flashcards.html" },
+        { "src": "^/study-timer$", "dest": "/focus-mode.html" },
+        { "src": "^/contact$", "dest": "/contact.html" },
+        { "src": "^/about$", "dest": "/aboutus.html" },
+        { "src": "^/signup$", "dest": "/signup.html" }
     ]
 }
