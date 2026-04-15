@@ -1,6 +1,6 @@
-document.getElementById("sendButton").addEventListener("click", async function() {
-
-    const userText = document.getElementById("userInput").value.trim();
+async function sendMessage() {
+    const userInput = document.getElementById("userInput");
+    const userText = userInput.value.trim();
     const output = document.getElementById("o-area");
 
     if (!userText) {
@@ -10,6 +10,7 @@ document.getElementById("sendButton").addEventListener("click", async function()
 
     output.value = "Typing... ⏳";
     userInput.value = "";
+
     try {
         const response = await fetch("https://aivion.onrender.com/api/chat", {
             method: "POST",
@@ -20,25 +21,36 @@ document.getElementById("sendButton").addEventListener("click", async function()
         });
 
         const data = await response.json();
-        console.log(data);
 
         if (data.error) {
             output.value = "Error: " + data.error;
         } else {
-            output.value = data.result; // ✅ FIXED
+            output.value = data.result;
         }
 
     } catch (error) {
         console.error("Error:", error);
         output.value = "Something went wrong 🚨";
     }
-});
+}
 
 
-//collapsed sidebar
+document.getElementById("sendButton")
+    .addEventListener("click", sendMessage);
+
+document.getElementById("userInput")
+    .addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+
 const btn = document.getElementById("toggle");
 const sidebar = document.getElementById("sidebar1");
 const close = document.getElementById("closeSidebar");
+const overlay = document.getElementById("overlay");
 
 btn.onclick = () => {
     sidebar.classList.toggle("active");
@@ -48,4 +60,4 @@ btn.onclick = () => {
 close.onclick = () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
-}
+};
