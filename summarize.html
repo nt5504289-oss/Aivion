@@ -8,39 +8,39 @@
     <link rel="icon" href="/public/logo.jpeg" class="logo">
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/summarizer.css">
-    <meta property="og:title" content="Aivion, AI study companion">
-    <meta property="og:description" content="AI Study Assistant">
-    <meta property="og:url" content="https://aivion.fs0ciety.in/">
-    <meta property="og:type" content="website">
-    <meta name="description" content="AI Study Assistant">
-    <meta name="author" content="Fs0coiety">
-    <link rel="icon" href="/public/logo.jpeg" type="image/png">
 </head>
 
 <body>
-    <section>
-        <button id="toggle">☰</button>
+    <section class="main">
+        <header>
+            <section class="navbar">
+                <button id="toggle">☰</button>
 
-        <div id="overlay"></div>
-
-
-        <!-- Changes 14 april -->
-
-        <div class="sidebar" id="sidebar1">
-
-            <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
-            <button id="closeSidebar"><b>✕</b></button>
+                <div id="overlay"></div>
 
 
-            <p id="nav-gap"></p>
+                <!-- Changes 14 april -->
 
-            <ul>
-                <li><button class="nav-btn"><a href="index.html">Home</a></button></li>
-                <li><button class="nav-btn"><a href="chatbot.html">Chat-Bot</a></button></li>
-                <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
-                <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
-            </ul>
-        </div>
+                <div class="sidebar" id="sidebar1">
+
+                    <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
+                    <button id="closeSidebar"><b>✕</b></button>
+
+
+                    <p id="nav-gap"></p>
+
+                    <ul>
+                        <li><button class="nav-btn"><a href="index.html">Home</a></button></li>
+                        <li><button class="nav-btn"><a href="chatbot.html">Chat-Bot</a></button></li>
+                        <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
+                        <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="head">
+                <a href="index.html"><img src="/public/logo.png" alt="Logo"></a>
+            </div>
+        </header>
 
         <!---------------------->
 
@@ -56,19 +56,17 @@
                         <h3 id="text1">Enter your text here...
                         </h3>
                     </div>
-                    <div class="userInput"><textarea name="userInput" id="input1" placeholder="Enter your text in the box below and click 'Summarize' to get a concise summary of your content."></textarea>
+                    <div class="userInput"><textarea name="userInput" id="input1"
+                            placeholder="Enter your text in the box below and click 'Summarize' to get a concise summary of your content."></textarea>
                         <div id="sendButton"><button type="submit">Summarize</button></div>
                     </div>
 
                 </div>
-                <!-- <div class="result-arrow">
-                <img src="/static/arrow.png" alt="Result Arrow">
-
-            </div> -->
                 <div class="output-area">
                     <h3 id="text1">Summary:</h3>
                     <div class="userOutput">
-                        <textarea readonly name="summaryOutput" id="summaryOutput" placeholder="Your summary will appear here. Click on the 'Copy' button to copy the text."></textarea>
+                        <textarea name="summaryOutput" id="summaryOutput"
+                            placeholder="Your summary will appear here. Click on the 'Copy' button to copy the text."></textarea>
                         <div id="cpybtn">
                             <button onclick="copyText()">Copy</button>
                         </div>
@@ -80,17 +78,17 @@
 
         </div>
 
+        <div id="footer"></div>
+        <script src="/js/index.js"></script>
+        <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer").innerHTML = data;
+                });
+        </script>
+        <!-- <script src="{{ url_for('static', filename='summarize.js') }}"></script> -->
     </section>
-    <div id="footer"></div>
-    <script src="/js/index.js"></script>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
-    <!-- <script src="{{ url_for('static', filename='summarize.js') }}"></script> -->
     <script src="/js/summarizer.js"></script>
 
 </body>

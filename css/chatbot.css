@@ -18,7 +18,7 @@ body {
     line-height: 1.6;
 }
 
-section {
+section #main-sec {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     min-height: 100vh;
@@ -41,6 +41,7 @@ section {
 
 .content {
     width: 100%;
+    max-width: 750px;
     display: grid;
     gap: 20px;
 }
@@ -132,11 +133,60 @@ textarea {
     display: none;
 }
 
+#footer {
+    width: 100%
+}
 
-/* SIDEBAR */
+
+@media (max-width: 900px) {
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        grid-column: 1 / -1;
+        padding: 15px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 95%;
+        margin: auto;
+    }
+
+    textarea {
+        height: 240px;
+        font-size: 15px;
+    }
+
+    .input-area {
+        grid-template-columns: 25px 1fr 45px;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    #userInput {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #sendButton {
+        height: 42px;
+        width: 42px;
+        font-size: 18px;
+    }
+
+    .plus label {
+        font-size: 28px;
+        padding: 5px;
+    }
+}
+
+/* SIDEBAR
 
 
-/* ------------------------------------------- */
+/* ------------------------------------------- 
 
 .sidebar {
     position: fixed;
@@ -195,6 +245,7 @@ a {
 
 ul {
     list-style: none;
+
     li {
         margin: 15px 0;
     }
@@ -213,19 +264,7 @@ button {
     font-size: 25px;
 }
 
-#head {
-    width: 100%;
-    text-align: center;
-    color: white;
-    h1 {
-        font-size: 40px;
-        font-weight: bold;
-    }
-    h3 {
-        font-size: 20px;
-        font-weight: normal;
-    }
-}
+
 
 #logo {
     width: 35px;
@@ -248,9 +287,192 @@ button {
 
 .nav-btn:hover {
     background: #ffffff;
+
     a {
         text-decoration: none;
         color: rgb(0, 0, 0)
     }
+
     transform: scale(1.15);
+} */
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+
+    a {
+        text-decoration: none;
+        color: white
+    }
+}
+
+
+
+#toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-size: larger;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1002;
+}
+
+#closeSidebar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+ul {
+    list-style: none;
+
+    li {
+        margin: 15px 0;
+    }
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#closeSidebar {
+    border: none;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 200px;
+}
+
+.nav-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+}
+
+.nav-btn:hover {
+    background: #ffffff;
+
+    a {
+        text-decoration: none;
+        color: rgb(0, 0, 0)
+    }
+
+    transform: scale(1.15);
+}
+
+#logo {
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.head a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: var(--space-md);
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+
+
+}
+
+.head h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    padding-bottom: 40px;
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.head img {
+    width: 50px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+#head {
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    h1 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
 }

@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat-Bot</title>
+    <title>Chat Bot</title>
     <link rel="icon" href="/logos/logo.jpeg" class="logo">
     <link rel="stylesheet" href="/css/chatbot.css">
-    <link rel="stylesheet" href="/css/font">
+    <link rel="stylesheet" href="/css/font.css">
     <meta property="og:title" content="Aivion, AI study companion">
     <meta property="og:description" content="AI Study Assistant">
     <meta property="og:url" content="https://aivion.fs0ciety.in/">
@@ -18,39 +18,46 @@
 </head>
 
 <body>
-    <section>
+    <header>
+        <section class="navbar">
+            <button id="toggle">☰</button>
 
-        <button id="toggle">☰</button>
-
-        <div id="overlay"></div>
-
-
-        <!-- Changes 14 april -->
-
-        <div class="sidebar" id="sidebar1">
-
-            <a href="index.html"><span><img src="/public/logo.png" alt="Logo" id="logo"></a>
-            <button id="closeSidebar"><b>✕</b></button>
+            <div id="overlay"></div>
 
 
-            <p id="nav-gap"></p>
+            <!-- Changes 14 april -->
 
-            <ul>
-                <li><button class="nav-btn"><a href="index.html">Home</a></button></li>
-                <li><button class="nav-btn"><a href="summarize.html">Summarizer</a></button></li>
-                <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
-                <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
-            </ul>
+            <div class="sidebar" id="sidebar1">
+
+                <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
+                <button id="closeSidebar"><b>✕</b></button>
+
+
+                <p id="nav-gap"></p>
+
+                <ul>
+                    <li><button class="nav-btn"><a href="index.html">Home</a></button></li>
+                    <li><button class="nav-btn"><a href="summarize.html">Summarizer</a></button></li>
+                    <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
+                    <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
+                </ul>
+            </div>
+        </section>
+        <div class="head">
+            <a href="index.html"><img src="/public/logo.png" alt="Logo"></a>
         </div>
+    </header>
+    <section id="main-sec">
         <div class="main">
             <div id="head">
-                <h1>AI Research Assistant</h1><br>
+                <h1>AI Research Assistant</h1>
                 <h3>One Place for All Your Queries</h3>
             </div>
+            <br>
 
             <div class="content">
                 <div class="output-area">
-                    <textarea readonly name="output" id="o-area" placeholder="Output will be shown here"></textarea>
+                    <textarea name="output" id="o-area" placeholder="Output will be shown here"></textarea>
                     </p>
                 </div>
                 <div class="in">

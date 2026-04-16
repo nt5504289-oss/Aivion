@@ -13,25 +13,35 @@
 
 <body>
     <header class="header">
+        <section class="navbar">
+            <button id="toggle">☰</button>
 
-        <nav class="nav">
+            <div id="overlay"></div>
 
-            <a href="index.html" class="navbar__logo">
-                AiVion
-            </a>
-            <div class="hamburger" id="hamburger">
-                ☰
+
+            <!-- Changes 14 april -->
+
+            <div class="sidebar" id="sidebar1">
+
+                <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
+                <button id="closeSidebar"><b>✕</b></button>
+
+
+                <p id="nav-gap"></p>
+
+                <ul>
+                    <li><button class="nav-btn"><a href="index.html">Home</a></button></li>
+                    <li><button class="nav-btn"><a href="chatbot.html">Chat-Bot</a></button></li>
+                    <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
+                    <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
+                    <li><button class="nav-btn"><a href="aboutus.html">About Us</a></button></li>
+
+                </ul>
             </div>
-
-            <ul class="navbar_menu" id="navMenu">
-                <li><a href="flashcards.html">Flashcards</a></li>
-                <li><a href="summarize.html">Summarize</a></li>
-                <li><a href="chat_bot.html">Chat bot</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-                <li><a href="about-us.html">About</a></li>
-
-            </ul>
-        </nav>
+        </section>
+        <div class="head">
+            <a href="index.html"><img src="/public/logo.png" alt="Logo"></a>
+        </div>
     </header>
 
     <main>
@@ -41,10 +51,14 @@
                     <form>
                         <h1>Create Account</h1>
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.google.com/" class="icon" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a>
-                            <a href="https://github.com/" class="icon" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.google.com/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="https://github.com/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your email for registeration</span>
                         <input type="text" placeholder="Name">
@@ -57,10 +71,14 @@
                     <form>
                         <h1>Sign In</h1>
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.google.com/" class="icon" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a>
-                            <a href="https://github.com/" class="icon" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/starhazers_/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.google.com/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="https://github.com/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/aryan-1cse/" class="icon" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your email password</span>
                         <input type="email" placeholder="Email">
@@ -92,7 +110,8 @@
         <div id="mobileMessage">
             <div class="mobile-box">
                 <h2>Desktop Only</h2>
-                <p>This page is only available on desktop.<br> Please open on a larger screen to sign in.</p>
+                <p>This page is only available for desktop viewers.<br> Please open on a larger screen or visit home
+                    page to sign in.</p>
             </div>
         </div>
 

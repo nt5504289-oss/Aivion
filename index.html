@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aivion, AI companion</title>
+    <title>Aivion</title>
     <link rel="stylesheet" href="/css/font.css">
     <link rel="icon" href="/public/logo.jpeg" class="logo">
     <link rel="stylesheet" href="/css/index.css">
@@ -18,27 +18,38 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
+        <section class="navbar">
+            <button id="toggle">☰</button>
 
-        <nav class="nav">
+            <div id="overlay"></div>
 
-            <a href="index.html" class="navbar__logo">
-                 AiVion
-            </a>
-            <div class="hamburger" id="hamburger">
-                ☰
+
+            <!-- Changes 14 april -->
+
+            <div class="sidebar" id="sidebar1">
+
+                <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
+                <button id="closeSidebar"><b>✕</b></button>
+
+
+                <p id="nav-gap"></p>
+
+                <ul>
+                    <li><button class="nav-btn"><a href="chatbot.html">Chat-Bot</a></button></li>
+                    <li><button class="nav-btn"><a href="focus-mode.html">Lofi</a></button></li>
+                    <li><button class="nav-btn"><a href="flashcards.html">Flashcards</a></button></li>
+                    <li><button class="nav-btn"><a href="aboutus.html">About Us</a></button></li>
+                    <li><button class="nav-btn"><a href="contact.html">Contact Us</a></button></li>
+
+                </ul>
             </div>
-
-            <ul class="navbar_menu" id="navMenu">
-                <li><a href="chatbot.html">Chat-Bot</a></li>
-                <li><a href="summarize.html">Summarize</a></li>
-                <li><a href="flashcards.html">Flashcards</a></li>
-                <li><a href="focus-mode.html">Lofi</a></li>
-                <li><a href="contact.html">Contact </a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-
-            </ul>
-        </nav>
+        </section>
+        <div class="head">
+            <a href="index.html">
+                <h2>AiVion</h2>
+            </a>
+        </div>
     </header>
     <main>
         <section class="hero_container">
@@ -65,11 +76,14 @@
                 <div class="login_input">
                     <h3 class="login_space"> Sign In</h3>
                     <p class="email_space">Email</p>
-                    <input type="email" placeholder="Enter your email" aria-label="Email input for updates" class="email">
+                    <input type="email" placeholder="Enter your email" aria-label="Email input for updates"
+                        class="email">
                     <p class="password_space">Password</p>
-                    <input type="password" placeholder="Enter your password" aria-label="Password input for updates" class="password">
+                    <input type="password" placeholder="Enter your password" aria-label="Password input for updates"
+                        class="password">
                     <button class="login_button" aria-label="Login to your account">Login</button>
-                    <a href="signup.html" class="signup_link" aria-label="Sign up link">Don't have an account? Sign up</a>
+                    <a href="signup.html" class="signup_link" aria-label="Sign up link">Don't have an account? Sign
+                        up</a>
                 </div>
             </div>
 
