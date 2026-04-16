@@ -9,7 +9,7 @@ document.getElementById("sendButton").addEventListener("click", async function()
     }
 
     output.value = "Typing... ⏳";
-    userInput.value = "            ";
+    userInput.value = "";
     try {
         const response = await fetch("https://aivion.onrender.com/api/chat", {
             method: "POST",
