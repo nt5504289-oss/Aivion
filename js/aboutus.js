@@ -10,7 +10,7 @@ fetch("footer.html")
 const buttons = document.querySelectorAll('.container-name button');
 
 buttons.forEach(button => {
-    button.addEventListener('click', function (e) {
+    button.addEventListener('click', function(e) {
         e.stopPropagation();
 
         const dropdown = this.nextElementSibling;

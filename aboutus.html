@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="icon" href="/public/logo.jpeg" class="logo">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/aboutus.css">
     <meta property="og:title" content="Aivion, AI study companion">
     <meta property="og:description" content="AI Study Assistant">
@@ -34,7 +35,7 @@
 
             <div class="sidebar" id="sidebar1">
 
-                <a href="index.html"><img src="/public/logo.png" alt="Logo" id="logo"></a>
+                <a href="index.html"><img src="/public/logo.jpeg alt="Logo" id="logo"></a>
                 <button id="closeSidebar"><b>✕</b></button>
 
 
@@ -53,116 +54,80 @@
             <a href="index.html"><img src="/public/logo.png" alt="Logo"></a>
         </div>
     </header>
-    <div class="heading">
-        <p class="eyebrow">Future of Learning</p>
-        <h2>About Student AI</h2>
-        <p>Student AI is a cutting-edge artificial intelligence platform designed to assist students in their learning journey.
-        </p>
-        <div class="hero-actions">
-            <a href="#impact" class="btn btn-primary">Explore Impact</a>
-            <a href="#mission" class="btn btn-secondary">Our Mission</a>
-            <a href="#communityToggle" class="btn btn-secondary btn-community">Our Team</a>
-        </div>
-        <div class="scroll-cue" aria-hidden="true">
-            <span></span>
-        </div>
-    </div>
 
+    <!-- ===== HERO ===== -->
+    <section class="about-hero">
+        <h1>About Student AI</h1>
+        <p>We are building the future of learning with AI.</p>
+
+        <div class="hero-buttons">
+            <a href="#impact">Explore Impact</a>
+            <a href="#mission">Our Mission</a>
+            <a href="#team">Our Team</a>
+        </div>
+    </section>
+
+    <!-- ===== CONTENT ===== -->
     <div class="container">
-        <div class="section intro">
-            <p>Education is evolving — and so are the needs of modern students. Student AI was founded with a simple belief: learning should be intelligent, personalized, and accessible to everyone.</p>
-
-            <p>In a world driven by technology, students deserve tools that not only provide answers but also build understanding, confidence, and real academic growth.</p>
-
-            <p>We are building the next generation of learning infrastructure powered by AI — a smart academic companion helping students think better, learn faster, and achieve more.</p>
-        </div>
-
-        <div class="grid" id="mission">
-            <div class="card">
-                <h2>Vision</h2>
-                <p>To become a globally trusted AI learning ecosystem that empowers millions of students<br>to unlock their full potential.</p>
-            </div>
-            <div class="card">
-                <h2>Mission</h2>
-                <p>To make high-quality academic support intelligent, affordable, and universally accessible<br>through responsible AI innovation.</p>
-            </div>
-        </div>
-
-        <div class="stats-grid" aria-label="Student AI metrics">
-            <div class="stat-card">
-                <h3>1M+</h3>
-                <p>Learning sessions guided</p>
-            </div>
-            <div class="stat-card">
-                <h3>120+</h3>
-                <p>Subjects supported</p>
-            </div>
-            <div class="stat-card">
-                <h3>24/7</h3>
-                <p>Smart academic assistance</p>
-            </div>
-        </div>
-        <div class="members">
-            <a href="#community" id="communityToggle">
-                <h2 id="m">Meet Our Team</h2>
-            </a>
-            <div></div>
-            <div class="container-name">
-                <button class="member-button">Anas</button>
-                <div class="dropdown">
-                    <p id="con">Anas establishes technical architecture and oversees all engineering standards.</p>
-                </div>
-            </div>
-            <div class="container-name">
-                <button class="member-button">Aryan</button>
-                <div class="dropdown">
-                    <p id="con">This is your dropdown paragraph!</p>
-                </div>
-            </div>
-            <div class="container-name">
-                <button class="member-button">Suryansh Kashav</button>
-                <div class="dropdown">
-                    <p id="con">This is your dropdown paragraph!</p>
-                </div>
-            </div>
-            <div class="container-name">
-                <button class="member-button">Tannu Thakur</button>
-                <div class="dropdown">
-                    <p id="con">This is your dropdown paragraph!</p>
-                </div>
-            </div>
-            <div class="container-name">
-                <button class="member-button">Sejal</button>
-                <div class="dropdown">
-                    <p id="con">This is your dropdown paragraph!</p>
-                </div>
-            </div>
-        </div>
-
 
         <div class="section">
-            <h2>Our Commitment</h2>
-            <p>We are committed to continuous innovation, ethical AI development, and creating meaningful educational impact that prepares students for the future.</p>
+            <p>
+                Student AI is a smart academic assistant designed to help students learn faster, understand better, and grow academically.
+            </p>
+        </div>
+
+        <div class="section" id="mission">
+            <h2>Mission</h2>
+            <p>To make education intelligent, accessible, and personalized.</p>
         </div>
 
         <div class="section" id="impact">
-            <h2>Our Impact</h2>
-            <p>Helping students improve learning efficiency, boost confidence, and achieve academic outcomes through intelligent assistance and personalized support.</p>
+            <h2>Impact</h2>
+            <p>Helping thousands of students improve learning efficiency.</p>
         </div>
 
-        <div class="section">
-            <h2>What Students Say</h2>
-            <p>"Student AI has completely changed the way I study. Complex topics now feel simple and manageable."</p>
-        </div>
+        <!-- ===== TEAM ===== -->
+        <section class="team-section" id="team">
+            <h1>Meet the Team</h1>
 
-        <div class="section">
-            <h2>Ethics And Responsibility</h2>
-            <p>We prioritize transparency, data privacy, and fairness in AI. Our systems are built to support learning responsibly without replacing human understanding.</p>
-        </div>
+            <div class="team-grid">
+
+                <div class="team-card">
+                    <h2>Anas Khan</h2>
+                    <p>Lead Developer</p>
+                    <p>Handles architecture and development.</p>
+                </div>
+
+                <div class="team-card">
+                    <h2>Suryansh</h2>
+                    <p>Junior Developer</p>
+                    <p>Supports development & testing.</p>
+                </div>
+                <div class="team-card">
+                    <h2>Aryan</h2>
+                    <p>Senior Developer</p>
+                    <p>Builds core features.</p>
+                </div>
+
+                <div class="team-card">
+                    <h2>Tanu</h2>
+                    <p>Frontend Developer</p>
+                    <p>Handles UI/UX design and implementation.</p>
+                </div>
+                <div class="team-card">
+                    <h2>Sejal</h2>
+                    <p>UI/UX Designer</p>
+                    <p>Handles user interface and experience design.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
 
     </div>
     <div id="footer"></div>
-    <script src="scripts/main.js"></script>
+    <script src="js/index.js"></script>
     <script>
         fetch("footer.html")
             .then(response => response.text())
