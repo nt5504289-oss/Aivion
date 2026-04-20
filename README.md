@@ -96,10 +96,10 @@ AI: Groq API
 
 👨‍💻 Authors
 👩‍💻 Sejal – https://github.com/sejal0908
-👨‍💻 Charlie – https://github.com/SKCharlie-17
+👨‍💻 Suryansh – https://github.com/SKCharlie-17
 👨‍💻 Aryan – https://github.com/aryan060606
 👨‍💻 Anask – https://github.com/anask5
-👨‍💻 Tannu Tinoria – https://github.com/nt5504289-oss
+👨‍💻 Tannu Thakur – https://github.com/nt5504289-oss
 
 ⭐ Support
 If you like this project, give it a ⭐ on GitHub!
